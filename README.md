@@ -1,9 +1,10 @@
 <!--content-->
-# Data collection for Leap Motion
+# AI Music Repository: Data Collection + All Model Code
 
+## Data Collection on Leap Motion
 Collect music-related motion data from the Leap Motion.  
 
-## Install Leap Motion Python SDK
+### Install Leap Motion Python SDK
 This module makes use of a compiled module called `leapc_cffi`. We include some pre-compiled python objects with our
 Gemini installation from 5.17 onwards. Supported versions can be found [here](#pre-compiled-module-support). If you 
 have the matching python version and have installed Gemini into the default location you can follow the steps below:
@@ -15,7 +16,7 @@ pip install -e leapc-python-api
 python examples/tracking_event_example.py
 ```
 
-### Custom Install
+#### Custom Install
 
 This module assumes that you have the Leap SDK installed in the default location. If this is not the case
 for you, you can use an environment variable to define the installation location. Define the environment variable
@@ -31,7 +32,7 @@ By default, this path is the following for each operating system:
 - Linux ARM: `/opt/ultraleap/LeapSDK`
 - Darwin: `/Applications/Ultraleap Hand Tracking.app/Contents/LeapSDK`
 
-## Pre-Compiled Module Support
+### Pre-Compiled Module Support
 
 The included pre-compiled modules within our 5.17 release currently only support the following versions of python:
 
@@ -43,7 +44,7 @@ The included pre-compiled modules within our 5.17 release currently only support
 Expanded pre-compiled support will be added soon. However, this does not restrict you to these versions, if you wish to 
 use a different python version please follow the instructions below to compile your own module.
 
-### Missing Compiled Module?
+#### Missing Compiled Module?
 
 You might not have the correct matching compiled `leapc_cffi` module for your system, this can cause issues when importing
 leap, such as: `ModuleNotFoundError: No module named 'leapc_cffi._leapc_cffi'`
@@ -59,12 +60,15 @@ pip install -e leapc-python-api
 python examples/tracking_event_example.py
 ```
 
-## Download music!
+### Download music!
 Donwload music from [here](https://drive.google.com/drive/folders/16kNi7iGqIu3IZkfYwiuCi-JijAszmXom?usp=sharing) and unzip to a directory of your naming in base directory. 
 
-## Data collection
+### Data collection
 Run `collect_data.py`. --input to specify input music directory, --output to specify where to save data, --random_order to randomize order of songs.
 Press 'n' when you're ready to start the next song (chosen randomly). Press 'x' to exit and save data. The program will keep collecting data till you exit.
 
-## Visualizing your data
+### Visualizing your data
 Just a quick way to make sure your collected data is sane. Run `decode_leap.py` after setting `datafile` in `main()` to the name of the .npy file you want to visualize. It will export it to the same directory with the same filename (.mp4). Use a tool like iMovie to align the last frame of the audio with the video to check if alignment is good.
+
+## Model Code:
+(To do: document)
