@@ -71,4 +71,5 @@ Press 'n' when you're ready to start the next song (chosen randomly). Press 'x' 
 Just a quick way to make sure your collected data is sane. Run `decode_leap.py` after setting `datafile` in `main()` to the name of the .npy file you want to visualize. It will export it to the same directory with the same filename (.mp4). Use a tool like iMovie to align the last frame of the audio with the video to check if alignment is good.
 
 ## Model Code:
-(To do: document)
+Load in data with `data_utils_midi.py`. Then, split large MIDI files into windows using `split_midi.py`. Preprocess data with `preprocess_midi.py`.
+Specify hyperparameters in `hparams.py`. Train the model using `train_midi.py`. Run real-time inference using `evaluate.py`. Check the command-line-arguments for these tools to see how to use them (to specify UDP ports, etc)
